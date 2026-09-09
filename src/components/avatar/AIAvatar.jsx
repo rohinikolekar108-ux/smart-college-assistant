@@ -1,0 +1,4 @@
+import { Bot, Sparkles } from 'lucide-react'
+import AvatarStatus from './AvatarStatus'
+export default function AIAvatar({ state }) { const copy = { idle: ['Hello! I\'m your Smart College Assistant.', 'How can I help you today?'], listening: ["I'm listening...", 'Ask me about your campus'], thinking: ['Let me find that information...', 'Checking the college guide'], speaking: ["Here's what I found...", 'Your answer is ready'], error: ["Sorry, I couldn't understand that.", 'Try typing your question instead'] }[state] ?? []
+return <div className="avatar-panel"><div className={`avatar-orbit ${state}`}><div className="avatar-glow" /><div className="avatar-face"><div className="avatar-antenna"><Sparkles size={14} /></div><div className="avatar-eyes"><span /><span /></div><div className="avatar-mouth" /></div></div><AvatarStatus state={state} /><h2>{copy[0]}</h2><p>{copy[1]}</p></div> }

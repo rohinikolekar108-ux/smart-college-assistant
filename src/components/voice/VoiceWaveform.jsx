@@ -1,0 +1,1 @@
+export default function VoiceWaveform({ active = false }) { return <div className={`waveform ${active ? 'active' : ''}`} aria-hidden="true">{Array.from({ length: 18 }, (_, index) => <i key={index} style={{ '--i': index }} />)}</div> }

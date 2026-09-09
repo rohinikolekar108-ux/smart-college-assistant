@@ -1,0 +1,1 @@
+export default function CounsellingWelcome() { return <div className="counselling-welcome"><span className="eyebrow">AI COLLEGE HELP DESK</span><h1>Student Counselling</h1><p>Ask anything about your college using your voice.</p></div> }

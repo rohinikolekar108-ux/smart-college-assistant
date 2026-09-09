@@ -1,0 +1,4 @@
+import { ArrowUp, Mic } from 'lucide-react'
+import { useState } from 'react'
+import { useCounselling } from '../../context/CounsellingContext'
+export default function ChatInput() { const [value, setValue] = useState(''); const { askQuestion, startVoiceInput } = useCounselling(); const submit = (event) => { event.preventDefault(); if (value.trim()) { askQuestion(value); setValue('') } }; return <form className="chat-input" onSubmit={submit}><input value={value} onChange={(event) => setValue(event.target.value)} placeholder="Ask your college question..." aria-label="College question" /><button type="button" className="input-icon" onClick={startVoiceInput} aria-label="Start microphone"><Mic size={19} /></button><button className="send-button" type="submit" aria-label="Send question"><ArrowUp size={19} /></button></form> }

@@ -1,0 +1,3 @@
+import { MapPinned } from 'lucide-react'
+import { useLocation } from 'react-router-dom'
+export default function SmartCollegeMap() { const { state } = useLocation(); const location = state?.location; return <div className="map-page"><div className="coming-icon"><MapPinned size={30} /></div><span className="eyebrow">FUTURE MODULE</span><h1>Smart College Map</h1><p>Smart College Map Module</p>{location ? <div className="received-location"><span>Selected location</span><strong>{location.name}</strong><dl><div><dt>Building</dt><dd>{location.building}</dd></div><div><dt>Floor</dt><dd>{location.floor}</dd></div><div><dt>Room</dt><dd>{location.room}</dd></div></dl></div> : <small>Select “Show on Map” from a location answer to see its details here.</small>}</div> }
